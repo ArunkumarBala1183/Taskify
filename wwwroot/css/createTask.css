@@ -1,0 +1,145 @@
+﻿.card {
+    max-width: 60rem;
+    max-height: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+.title {
+    padding: 2rem;
+}
+
+.file {
+    padding: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    max-width: 500px;
+    margin-top: 2rem;
+}
+
+.form-control {
+    height: 75px;
+    font-family: Arial;
+    font-size: 25px;
+}
+
+.form-title {
+    color: #000000;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+
+.drop-container {
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 2.1875rem;
+    border-radius: 10px;
+    border: 2px dashed rgb(171, 202, 255);
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+    .drop-container:hover {
+        background: rgba(0, 140, 255, 0.164);
+        border-color: rgba(17, 17, 17, 0.616);
+    }
+
+        .drop-container:hover .drop-title {
+            color: #222;
+        }
+
+.drop-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+}
+
+#file-input {
+    width: 350px;
+    max-width: 100%;
+    color: #444;
+    padding: 2px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(8, 8, 8, 0.288);
+}
+
+    #file-input::file-selector-button {
+        margin-right: 20px;
+        border: none;
+        background: #084cdf;
+        padding: 10px 20px;
+        border-radius: 10px;
+        color: #fff;
+        cursor: pointer;
+        transition: background .2s ease-in-out;
+    }
+
+        #file-input::file-selector-button:hover {
+            background: #0d45a5;
+        }
+
+.outline {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    max-width: 64rem;
+    height: inherit;
+    padding: 2rem;
+}
+
+.btn {
+    display: flex;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4rem;
+    width: 7rem;
+    font-size: 2rem;
+    border-radius: 14px;
+}
+
+.card .submission {
+    display: flex;
+    align-content: center;
+    justify-content: space-between
+}
+
+    .card .submission label {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+.date {
+    padding-block: 2rem;
+    padding-inline: 50px;
+    max-width: 50%;
+}
+
+.employees {
+    width: fit-content;
+    padding: 1rem;
+    height: 500px;
+    overflow: auto;
+}
+
+.message {
+    color:red;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    font-size: 15px;
+    font-style: italic;
+    font-family: cursive;
+}

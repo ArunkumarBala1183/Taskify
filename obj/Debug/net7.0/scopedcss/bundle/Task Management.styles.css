@@ -1,0 +1,106 @@
+/* _content/Task Management/Views/Employee/AddEmployee.cshtml.rz.scp.css */
+.form-control:focus[b-es0gchl4ai] {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button[b-es0gchl4ai] {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none;
+    margin-bottom: 30px;
+}
+
+    .profile-button:hover[b-es0gchl4ai] {
+        background: #682773
+    }
+
+    .profile-button:focus[b-es0gchl4ai] {
+        background: #682773;
+        box-shadow: none
+    }
+
+    .profile-button:active[b-es0gchl4ai] {
+        background: #682773;
+        box-shadow: none
+    }
+
+.back:hover[b-es0gchl4ai] {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels[b-es0gchl4ai] {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+}
+
+.add-experience:hover[b-es0gchl4ai] {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+
+.main[b-es0gchl4ai] {
+    padding-bottom: 2em;
+}
+
+#gender[b-es0gchl4ai] {
+    margin-left: 20px;
+}
+
+.form-control[b-es0gchl4ai] {
+    margin-bottom: 12px;
+}
+
+.option[b-es0gchl4ai] {
+    margin-top: 1em;
+    margin-left: 24em;
+    margin-bottom: 2em;
+}
+
+.containers[b-es0gchl4ai] {
+    margin-top: 20px;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff69;
+    border-radius: 5px;
+}
+
+label[b-es0gchl4ai] {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.inpdddut[type="file"][b-es0gchl4ai] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.inpdddut[type="submit"][b-es0gchl4ai] {
+    padding: 10px 20px;
+    background-color: #682773;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .inpdddut[type="submit"]:hover[b-es0gchl4ai] {
+        background-color: #682773;
+    }
+
+.status[b-es0gchl4ai] {
+    position: relative;
+    top: 20px;
+    left: 40%;
+    width: fit-content;
+}

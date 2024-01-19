@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "_ResponsiveOperations";
+    ViewData["Title"] = "View Tasks";
+    ViewData["css"] = "viewTasks.css";
+}
+
+@using Task_Management.Models.Templete
+@model IEnumerable<Tasks>
+
+
+<style>
+    .menu {
+        position: absolute;
+        display: inline-block;
+    }
+
+    .drp-img {
+        padding: 16px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0rem;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        .dropdown-content a {
+            color: black;
+            padding-inline: 16px;
+            padding-bottom: 4px;
+            text-decoration: none;
+            display: block;
+        }
+
+    .menu:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .menu:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+</style>
+
+
+<div class="heading-div">
+    <h1 class="heading">Tasks</h1>
+</div>
+
+<hr class="line" />
+
+@if (ViewData["message"] != null)
+{
+    <div class="outbox">
+        <p>@ViewData["message"]</p>
+    </div>
+}
+else
+{
+    @foreach (Tasks task in Model)
+    {
+        <div class="outbox">
+            <a style="text-decoration:none" href="@Url.Action("ViewDetails","Task" , new {projectId = task.projectId , taskId = task.taskId})">
+                <div class="cardbox card">
+                    <div class="task-img">
+                        <img src="~/images/task.png">
+                    </div>
+                    <h1 style="color:black" class="title">@task.Title</h1>
+                    <div class="menu">
+                        <img class="drp-img" src="~/images/menu.png">
+                        <div class="dropdown-content">
+                            <a href="@Url.Action("EditTask","Task" , new {taskId = task.taskId})">Edit</a>
+                            <a href="@Url.Action("DeleteTask","Task" , new {taskId = task.taskId})">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+    }
+}

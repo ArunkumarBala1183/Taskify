@@ -1,0 +1,137 @@
+﻿@{
+    Layout = "_ResponsiveOperations";
+    ViewData["css"] = "createTask.css";
+    ViewData["Title"] = "Edit Task";
+}
+
+@using Task_Management.Models.Templete
+
+@model Tasks
+
+<script>
+    document.addEventListener('DOMContentLoaded',function()
+    {
+        change();
+    });
+    function change() {
+        var checkboxes = document.getElementsByClassName("employee-checkbox");
+        var selectAll = document.getElementById("selectAll");
+        var checkCount = 0;
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                checkCount++;
+            }
+        }
+
+        if (checkboxes.length == checkCount) {
+            selectAll.checked = true;
+        }
+        else {
+            selectAll.checked = false;
+        }
+
+    }
+    function toggleCheck() {
+        var selectAll = document.getElementById("selectAll");
+        var checkboxes = document.getElementsByClassName("employee-checkbox");
+
+        if (selectAll.checked) {
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = true;
+            }
+
+        }
+        else {
+            for (var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].checked = false;
+            }
+        }
+    }
+</script>
+
+@if (ViewData["message"] != null && ViewData["message"].ToString() == "Select Employees")
+{
+    <span style="color:red" class="message">@ViewData["message"]</span>
+}
+else
+{
+    <span style="color:green" class="message">@ViewData["message"]</span>
+}
+
+<div class="outline card">
+    <form class="form" asp-action="EditTask" enctype="multipart/form-data">
+        <div>
+            <div class="title card">
+                <div class="mb-3">
+                    <input type="text" asp-for="taskId" hidden value="@Model.taskId" />
+                </div>
+                <div class="mb-3">
+                    <input type="text" value="@((Model.Title != null) ? Model.Title : "")" asp-for="Title" required class="form-control" id="formGroupExampleInput" placeholder="Title">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" asp-for="Description" placeholder="Description">@Model.Description</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="file card">
+            <span class="form-title">Upload your file</span>
+            <label for="file-input" class="drop-container">
+                <span class="drop-title">Drop files here</span>
+                or
+                <input type="file" asp-for="taskFile" accept="*" id="file-input">
+            </label>
+            <span style="margin-top: 1rem;font-size: 20px;">@Model.fileName</span>
+        </div>
+
+        <div class="date card">
+            <div class="submission">
+                <label>Submission Deadline </label>
+                <input type="datetime-local" asp-for="deadlineDate" />
+            </div>
+        </div>
+
+        <div class="employees card">
+            @if (ViewBag.employees == null)
+            {
+                <span>@ViewBag.status</span>
+            }
+            else
+            {
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Select All</th>
+                            <th scope="col">Employee Names</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.CheckBoxFor(m => m.selectAll, new { id = "selectAll", onchange = "toggleCheck()" })</td>
+                            <td>Select All</td>
+                        </tr>
+                        @{
+                            List<Employee> employeeDetails = (List<Employee>)ViewBag.employees;
+                        }
+                        @foreach (Employee employee in employeeDetails)
+                        {
+                            <tr>
+                                <td>
+                                    <input style="margin-right:1rem;"
+                                    @(Model.selectedIds.Contains(employee.employeeId) ? "checked" : "")
+                                    onchange="change()" type="checkbox" name="selectedIds" class="employee-checkbox" value="@employee.employeeId" />@employee.employeeId
+                                </td>
+                                <td>@employee.employeeName</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+
+        <div class="container">
+            <button class="btn btn-success" type="submit">Edit</button>
+        </div>
+    </form>
+</div>

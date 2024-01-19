@@ -1,0 +1,666 @@
+2023-08-22 13:19:27.666 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-08-22 13:19:28.500 +05:30 [INF] Now listening on: http://localhost:5182
+2023-08-22 13:19:28.502 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-22 13:19:28.503 +05:30 [INF] Hosting environment: Development
+2023-08-22 13:19:28.503 +05:30 [INF] Content root path: E:\Taskify\Task Management\Task Management
+2023-08-22 13:19:29.381 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/ - -
+2023-08-22 13:19:29.412 +05:30 [WRN] Failed to determine the https port for redirect.
+2023-08-22 13:19:29.920 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:19:30.008 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:19:30.974 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Execution Started
+2023-08-22 13:19:31.079 +05:30 [INF] Login Action Executed
+2023-08-22 13:19:31.095 +05:30 [INF] Executing ViewResult, running view Login.
+2023-08-22 13:19:31.355 +05:30 [INF] Executed ViewResult - view Login executed in 264.7238ms.
+2023-08-22 13:19:31.381 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Executed at 407.6755 sec
+2023-08-22 13:19:31.383 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Login (Task Management) in 1373.1168ms
+2023-08-22 13:19:31.383 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:19:31.395 +05:30 [INF] HTTP GET / responded 200 in 1991.2793 ms
+2023-08-22 13:19:31.410 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/ - - - 200 - text/html;+charset=utf-8 2034.6209ms
+2023-08-22 13:19:31.534 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/css/toast.css - -
+2023-08-22 13:19:31.576 +05:30 [INF] The file /css/toast.css was not modified
+2023-08-22 13:19:31.577 +05:30 [INF] HTTP GET /css/toast.css responded 304 in 42.7132 ms
+2023-08-22 13:19:31.580 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/css/toast.css - - - 304 - text/css 45.6867ms
+2023-08-22 13:19:31.721 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:19:31.725 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 4.4538ms
+2023-08-22 13:19:44.818 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5182/Login application/x-www-form-urlencoded 39
+2023-08-22 13:19:44.824 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:19:44.855 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Task_Management.Models.Templete.UserLogin) on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:19:44.945 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Execution Started
+2023-08-22 13:19:44.950 +05:30 [INF] Control => Login Post
+2023-08-22 13:19:50.397 +05:30 [INF] Executed DbCommand (251ms) [Parameters=[@__ToLower_0='?' (Size = 450), @__ToLower_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[managerId], [m].[emailId], [m].[gender], [m].[mobileNumber], [m].[name], [m].[password], [m].[role]
+FROM [manager] AS [m]
+WHERE LOWER([m].[managerId]) = @__ToLower_0 AND LOWER([m].[password]) = @__ToLower_1
+2023-08-22 13:19:52.782 +05:30 [INF] Executing RedirectResult, redirecting to /Login/AuthenticateRole.
+2023-08-22 13:19:52.782 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Executed at 7837.2827 sec
+2023-08-22 13:19:52.783 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Login (Task Management) in 7927.6043ms
+2023-08-22 13:19:52.783 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:19:52.789 +05:30 [INF] Session started; Key:cf730f5a-5e13-e1fa-f636-937c619ea780, Id:63f0133d-105e-c6fe-c1bf-3404d08688d2
+2023-08-22 13:19:52.790 +05:30 [INF] HTTP POST /Login responded 302 in 7971.8931 ms
+2023-08-22 13:19:52.807 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5182/Login application/x-www-form-urlencoded 39 - 302 0 - 7988.8702ms
+2023-08-22 13:19:52.808 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Login/AuthenticateRole - -
+2023-08-22 13:19:52.819 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.AuthenticateRole (Task Management)'
+2023-08-22 13:19:52.824 +05:30 [INF] Route matched with {action = "AuthenticateRole", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AuthenticateRole() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:19:52.832 +05:30 [INF] Task_Management.Controllers.LoginController.AuthenticateRole (Task Management) Execution Started
+2023-08-22 13:19:52.835 +05:30 [INF] Control => Authentication Role Action
+2023-08-22 13:19:52.978 +05:30 [INF] Executing RedirectResult, redirecting to /Project/ViewProjects.
+2023-08-22 13:19:52.978 +05:30 [INF] Task_Management.Controllers.LoginController.AuthenticateRole (Task Management) Executed at 146.2039 sec
+2023-08-22 13:19:52.979 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.AuthenticateRole (Task Management) in 154.0864ms
+2023-08-22 13:19:52.979 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.AuthenticateRole (Task Management)'
+2023-08-22 13:19:52.979 +05:30 [INF] HTTP GET /Login/AuthenticateRole responded 302 in 170.9134 ms
+2023-08-22 13:19:52.980 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Login/AuthenticateRole - - - 302 0 - 172.3292ms
+2023-08-22 13:19:52.987 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - -
+2023-08-22 13:19:52.989 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:19:52.992 +05:30 [INF] Route matched with {action = "ViewProjects", controller = "Project"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewProjects() on controller Task_Management.Controllers.ProjectController (Task Management).
+2023-08-22 13:19:53.000 +05:30 [INF] Project Controller  Executed
+2023-08-22 13:19:53.001 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Execution Started
+2023-08-22 13:19:53.004 +05:30 [INF] Control => View Projects Action
+2023-08-22 13:19:53.158 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[@__managerId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[projectId], [p].[closedProject], [p].[createdDate], [p].[description], [p].[managerId], [p].[title]
+FROM [project] AS [p]
+WHERE [p].[managerId] = @__managerId_0
+2023-08-22 13:19:53.211 +05:30 [INF] Fetched 
+{"currentProjects":[{"projectId":5,"description":null,"title":"Java","managerId":"M197","createdDate":"2023-08-11T00:00:00.0000000","closedProject":false,"$type":"Project"}],"closedProjects":[],"$type":"Projects"}
+2023-08-22 13:19:53.230 +05:30 [INF] Executing ViewResult, running view ViewProjects.
+2023-08-22 13:19:53.307 +05:30 [INF] Executed ViewResult - view ViewProjects executed in 78.5362ms.
+2023-08-22 13:19:53.307 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Executed at 306.3294 sec
+2023-08-22 13:19:53.307 +05:30 [INF] Executed action Task_Management.Controllers.ProjectController.ViewProjects (Task Management) in 314.7981ms
+2023-08-22 13:19:53.308 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:19:53.308 +05:30 [INF] HTTP GET /Project/ViewProjects responded 200 in 320.6181 ms
+2023-08-22 13:19:53.309 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - - - 200 - text/html;+charset=utf-8 322.0876ms
+2023-08-22 13:19:53.364 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/css/viewProjects.css - -
+2023-08-22 13:19:53.365 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/css/layout.css - -
+2023-08-22 13:19:53.366 +05:30 [INF] The file /css/viewProjects.css was not modified
+2023-08-22 13:19:53.366 +05:30 [INF] The file /css/layout.css was not modified
+2023-08-22 13:19:53.367 +05:30 [INF] HTTP GET /css/layout.css responded 304 in 1.4755 ms
+2023-08-22 13:19:53.367 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/css/layout.css - - - 304 - text/css 2.1506ms
+2023-08-22 13:19:53.370 +05:30 [INF] HTTP GET /css/viewProjects.css responded 304 in 5.2351 ms
+2023-08-22 13:19:53.372 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/css/viewProjects.css - - - 304 - text/css 8.0500ms
+2023-08-22 13:19:53.439 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:19:53.449 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.9763ms
+2023-08-22 13:19:53.459 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/images/man.png - -
+2023-08-22 13:19:53.465 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/images/menu.png - -
+2023-08-22 13:19:53.491 +05:30 [INF] Sending file. Request path: '/images/man.png'. Physical path: 'E:\Taskify\Task Management\Task Management\wwwroot\images\man.png'
+2023-08-22 13:19:53.492 +05:30 [INF] HTTP GET /images/man.png responded 200 in 31.7024 ms
+2023-08-22 13:19:53.493 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/images/man.png - - - 200 36059 image/png 33.0541ms
+2023-08-22 13:19:53.522 +05:30 [INF] Sending file. Request path: '/images/menu.png'. Physical path: 'E:\Taskify\Task Management\Task Management\wwwroot\images\menu.png'
+2023-08-22 13:19:53.523 +05:30 [INF] HTTP GET /images/menu.png responded 200 in 57.6880 ms
+2023-08-22 13:19:53.529 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/images/menu.png - - - 200 188 image/png 63.3106ms
+2023-08-22 13:20:18.287 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Task/ViewTasks?projectId=5&isClosed=False - -
+2023-08-22 13:20:18.288 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.TaskController.ViewTasks (Task Management)'
+2023-08-22 13:20:18.292 +05:30 [INF] Route matched with {action = "ViewTasks", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewTasks(Int32, Boolean) on controller Task_Management.Controllers.TaskController (Task Management).
+2023-08-22 13:20:18.303 +05:30 [INF] Task_Management.Controllers.TaskController.ViewTasks (Task Management) Execution Started
+2023-08-22 13:20:18.305 +05:30 [INF] ViewTask Action Executed
+2023-08-22 13:20:18.610 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__id_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[taskId], [t].[Description], [t].[Title], [t].[createdDate], [t].[deadlineDate], [t].[employeeIds], [t].[fileName], [t].[managerId], [t].[projectId], [t].[submittedDate], [t].[uploadedFile]
+FROM [tasks] AS [t]
+WHERE [t].[managerId] = @__id_0
+2023-08-22 13:20:18.710 +05:30 [INF] Executing ViewResult, running view ViewTasks.
+2023-08-22 13:20:18.771 +05:30 [INF] Executed ViewResult - view ViewTasks executed in 62.0795ms.
+2023-08-22 13:20:18.772 +05:30 [INF] Task_Management.Controllers.TaskController.ViewTasks (Task Management) Executed at 468.2229 sec
+2023-08-22 13:20:18.772 +05:30 [INF] Executed action Task_Management.Controllers.TaskController.ViewTasks (Task Management) in 479.5559ms
+2023-08-22 13:20:18.772 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.TaskController.ViewTasks (Task Management)'
+2023-08-22 13:20:18.774 +05:30 [INF] HTTP GET /Task/ViewTasks responded 200 in 486.6933 ms
+2023-08-22 13:20:18.775 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Task/ViewTasks?projectId=5&isClosed=False - - - 200 - text/html;+charset=utf-8 487.6672ms
+2023-08-22 13:20:18.811 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/css/viewTasks.css - -
+2023-08-22 13:20:18.824 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:18.825 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.2162ms
+2023-08-22 13:20:18.835 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/images/task.png - -
+2023-08-22 13:20:18.836 +05:30 [INF] Sending file. Request path: '/css/viewTasks.css'. Physical path: 'E:\Taskify\Task Management\Task Management\wwwroot\css\viewTasks.css'
+2023-08-22 13:20:18.837 +05:30 [INF] HTTP GET /css/viewTasks.css responded 200 in 25.1078 ms
+2023-08-22 13:20:18.838 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/css/viewTasks.css - - - 200 684 text/css 26.5095ms
+2023-08-22 13:20:18.873 +05:30 [INF] Sending file. Request path: '/images/task.png'. Physical path: 'E:\Taskify\Task Management\Task Management\wwwroot\images\task.png'
+2023-08-22 13:20:18.874 +05:30 [INF] HTTP GET /images/task.png responded 200 in 38.3660 ms
+2023-08-22 13:20:18.874 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/images/task.png - - - 200 1772 image/png 38.8752ms
+2023-08-22 13:20:24.789 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Task/ViewDetails?projectId=5&taskId=5 - -
+2023-08-22 13:20:24.794 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.TaskController.ViewDetails (Task Management)'
+2023-08-22 13:20:24.798 +05:30 [INF] Route matched with {action = "ViewDetails", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewDetails(Int32, Int32) on controller Task_Management.Controllers.TaskController (Task Management).
+2023-08-22 13:20:24.805 +05:30 [INF] Task_Management.Controllers.TaskController.ViewDetails (Task Management) Execution Started
+2023-08-22 13:20:25.074 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[taskId], [t].[Description], [t].[Title], [t].[createdDate], [t].[deadlineDate], [t].[employeeIds], [t].[fileName], [t].[managerId], [t].[projectId], [t].[submittedDate], [t].[uploadedFile]
+FROM [tasks] AS [t]
+WHERE [t].[taskId] = @__p_0
+2023-08-22 13:20:25.275 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[employeeId], [e].[emailId], [e].[employeeName], [e].[gender], [e].[managerId], [e].[mobileNumber], [e].[password], [e].[projectId], [e].[role]
+FROM [Employees] AS [e]
+WHERE [e].[employeeId] = @__p_0
+2023-08-22 13:20:25.315 +05:30 [INF] Data had been Searched
+2023-08-22 13:20:25.342 +05:30 [INF] Executing ViewResult, running view ViewDetails.
+2023-08-22 13:20:25.446 +05:30 [INF] Executed ViewResult - view ViewDetails executed in 105.1434ms.
+2023-08-22 13:20:25.446 +05:30 [INF] Task_Management.Controllers.TaskController.ViewDetails (Task Management) Executed at 640.8638 sec
+2023-08-22 13:20:25.446 +05:30 [INF] Executed action Task_Management.Controllers.TaskController.ViewDetails (Task Management) in 648.1538ms
+2023-08-22 13:20:25.446 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.TaskController.ViewDetails (Task Management)'
+2023-08-22 13:20:25.447 +05:30 [INF] HTTP GET /Task/ViewDetails responded 200 in 658.1462 ms
+2023-08-22 13:20:25.449 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Task/ViewDetails?projectId=5&taskId=5 - - - 200 - text/html;+charset=utf-8 659.7099ms
+2023-08-22 13:20:25.500 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/css/viewDetails.css - -
+2023-08-22 13:20:25.501 +05:30 [INF] HTTP GET /css/viewDetails.css responded 404 in 1.3495 ms
+2023-08-22 13:20:25.506 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/css/viewDetails.css - - - 404 0 - 2.6888ms
+2023-08-22 13:20:25.520 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:25.521 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 1.1664ms
+2023-08-22 13:20:25.523 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/images/documents.png - -
+2023-08-22 13:20:25.547 +05:30 [INF] Sending file. Request path: '/images/documents.png'. Physical path: 'E:\Taskify\Task Management\Task Management\wwwroot\images\documents.png'
+2023-08-22 13:20:25.547 +05:30 [INF] HTTP GET /images/documents.png responded 200 in 23.7770 ms
+2023-08-22 13:20:25.548 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/images/documents.png - - - 200 1266 image/png 24.4848ms
+2023-08-22 13:20:25.572 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Task/ViewChats?taskId=5 - -
+2023-08-22 13:20:25.572 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.TaskController.ViewChats (Task Management)'
+2023-08-22 13:20:25.575 +05:30 [INF] Route matched with {action = "ViewChats", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewChats(Int32) on controller Task_Management.Controllers.TaskController (Task Management).
+2023-08-22 13:20:25.580 +05:30 [INF] Task_Management.Controllers.TaskController.ViewChats (Task Management) Execution Started
+2023-08-22 13:20:25.582 +05:30 [INF] View Chat Action Executed
+2023-08-22 13:20:25.683 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__taskId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[id], [c].[created], [c].[message], [c].[personId], [c].[projectId]
+FROM [chat] AS [c]
+WHERE [c].[projectId] = @__taskId_0
+ORDER BY [c].[created] DESC
+2023-08-22 13:20:25.684 +05:30 [INF] Chat had been retrived
+2023-08-22 13:20:25.684 +05:30 [INF] Communicate between your teams here
+2023-08-22 13:20:25.692 +05:30 [INF] Executing JsonResult, writing value of type 'System.String'.
+2023-08-22 13:20:25.694 +05:30 [INF] Task_Management.Controllers.TaskController.ViewChats (Task Management) Executed at 114.6653 sec
+2023-08-22 13:20:25.695 +05:30 [INF] Executed action Task_Management.Controllers.TaskController.ViewChats (Task Management) in 119.2174ms
+2023-08-22 13:20:25.695 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.TaskController.ViewChats (Task Management)'
+2023-08-22 13:20:25.695 +05:30 [INF] HTTP GET /Task/ViewChats responded 200 in 122.9914 ms
+2023-08-22 13:20:25.695 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Task/ViewChats?taskId=5 - - - 200 - application/json;+charset=utf-8 123.3681ms
+2023-08-22 13:20:33.444 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Task/CreateTask - -
+2023-08-22 13:20:33.445 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.TaskController.CreateTask (Task Management)'
+2023-08-22 13:20:33.449 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateTask() on controller Task_Management.Controllers.TaskController (Task Management).
+2023-08-22 13:20:33.451 +05:30 [INF] Task_Management.Controllers.TaskController.CreateTask (Task Management) Execution Started
+2023-08-22 13:20:33.453 +05:30 [INF] Create Task Action Executed
+2023-08-22 13:20:33.466 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__projectId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[employeeId], [e].[emailId], [e].[employeeName], [e].[gender], [e].[managerId], [e].[mobileNumber], [e].[password], [e].[projectId], [e].[role]
+FROM [Employees] AS [e]
+WHERE [e].[projectId] = @__projectId_0
+2023-08-22 13:20:33.475 +05:30 [INF] Fetched 
+[{"employeeId":"Emp101","projectId":5,"employeeName":"Arun","role":"Employee","gender":"Male","emailId":"barunkumar1197@gmail.com","password":"Employee@123","managerId":"M197","mobileNumber":"8778496125","csvFile":null,"employeeDetails":null,"$type":"Employee"}]
+2023-08-22 13:20:33.478 +05:30 [INF] Executing ViewResult, running view CreateTask.
+2023-08-22 13:20:33.545 +05:30 [INF] Executed ViewResult - view CreateTask executed in 68.3197ms.
+2023-08-22 13:20:33.545 +05:30 [INF] Task_Management.Controllers.TaskController.CreateTask (Task Management) Executed at 93.8666 sec
+2023-08-22 13:20:33.545 +05:30 [INF] Executed action Task_Management.Controllers.TaskController.CreateTask (Task Management) in 95.7648ms
+2023-08-22 13:20:33.545 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.TaskController.CreateTask (Task Management)'
+2023-08-22 13:20:33.546 +05:30 [INF] HTTP GET /Task/CreateTask responded 200 in 101.0094 ms
+2023-08-22 13:20:33.546 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Task/CreateTask - - - 200 - text/html;+charset=utf-8 101.7557ms
+2023-08-22 13:20:33.604 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/css/createTask.css - -
+2023-08-22 13:20:33.609 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:33.610 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.6596ms
+2023-08-22 13:20:33.639 +05:30 [INF] Sending file. Request path: '/css/createTask.css'. Physical path: 'E:\Taskify\Task Management\Task Management\wwwroot\css\createTask.css'
+2023-08-22 13:20:33.639 +05:30 [INF] HTTP GET /css/createTask.css responded 200 in 34.6516 ms
+2023-08-22 13:20:33.639 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/css/createTask.css - - - 200 2770 text/css 34.9786ms
+2023-08-22 13:20:35.553 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Task/ViewTasks?linkCode=0 - -
+2023-08-22 13:20:35.554 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.TaskController.ViewTasks (Task Management)'
+2023-08-22 13:20:35.554 +05:30 [INF] Route matched with {action = "ViewTasks", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewTasks(Int32, Boolean) on controller Task_Management.Controllers.TaskController (Task Management).
+2023-08-22 13:20:35.556 +05:30 [INF] Task_Management.Controllers.TaskController.ViewTasks (Task Management) Execution Started
+2023-08-22 13:20:35.557 +05:30 [INF] ViewTask Action Executed
+2023-08-22 13:20:35.575 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__id_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[taskId], [t].[Description], [t].[Title], [t].[createdDate], [t].[deadlineDate], [t].[employeeIds], [t].[fileName], [t].[managerId], [t].[projectId], [t].[submittedDate], [t].[uploadedFile]
+FROM [tasks] AS [t]
+WHERE [t].[managerId] = @__id_0
+2023-08-22 13:20:35.592 +05:30 [INF] Executing ViewResult, running view ViewTasks.
+2023-08-22 13:20:35.595 +05:30 [INF] Executed ViewResult - view ViewTasks executed in 2.6211ms.
+2023-08-22 13:20:35.595 +05:30 [INF] Task_Management.Controllers.TaskController.ViewTasks (Task Management) Executed at 38.6034 sec
+2023-08-22 13:20:35.595 +05:30 [INF] Executed action Task_Management.Controllers.TaskController.ViewTasks (Task Management) in 40.7239ms
+2023-08-22 13:20:35.595 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.TaskController.ViewTasks (Task Management)'
+2023-08-22 13:20:35.595 +05:30 [INF] HTTP GET /Task/ViewTasks responded 200 in 42.0957 ms
+2023-08-22 13:20:35.596 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Task/ViewTasks?linkCode=0 - - - 200 - text/html;+charset=utf-8 42.7115ms
+2023-08-22 13:20:35.651 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:35.652 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.2835ms
+2023-08-22 13:20:37.616 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Employee/AddEmployee - -
+2023-08-22 13:20:37.617 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.EmployeeController.AddEmployee (Task Management)'
+2023-08-22 13:20:37.622 +05:30 [INF] Route matched with {action = "AddEmployee", controller = "Employee"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddEmployee() on controller Task_Management.Controllers.EmployeeController (Task Management).
+2023-08-22 13:20:37.624 +05:30 [INF] Task_Management.Controllers.EmployeeController.AddEmployee (Task Management) Execution Started
+2023-08-22 13:20:37.629 +05:30 [INF] Control => Add Employee Action
+2023-08-22 13:20:37.659 +05:30 [INF] Executing ViewResult, running view AddEmployee.
+2023-08-22 13:20:37.735 +05:30 [INF] Executed ViewResult - view AddEmployee executed in 77.6905ms.
+2023-08-22 13:20:37.735 +05:30 [INF] Task_Management.Controllers.EmployeeController.AddEmployee (Task Management) Executed at 111.0653 sec
+2023-08-22 13:20:37.735 +05:30 [INF] Executed action Task_Management.Controllers.EmployeeController.AddEmployee (Task Management) in 113.1785ms
+2023-08-22 13:20:37.735 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.EmployeeController.AddEmployee (Task Management)'
+2023-08-22 13:20:37.735 +05:30 [INF] HTTP GET /Employee/AddEmployee responded 200 in 119.3475 ms
+2023-08-22 13:20:37.736 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Employee/AddEmployee - - - 200 - text/html;+charset=utf-8 119.8017ms
+2023-08-22 13:20:37.792 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/css/addEmployee.css - -
+2023-08-22 13:20:37.811 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:37.811 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.2493ms
+2023-08-22 13:20:37.820 +05:30 [INF] Sending file. Request path: '/css/addEmployee.css'. Physical path: 'E:\Taskify\Task Management\Task Management\wwwroot\css\addEmployee.css'
+2023-08-22 13:20:37.820 +05:30 [INF] HTTP GET /css/addEmployee.css responded 200 in 28.4695 ms
+2023-08-22 13:20:37.820 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/css/addEmployee.css - - - 200 1037 text/css 28.7467ms
+2023-08-22 13:20:37.826 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Images/man.png - -
+2023-08-22 13:20:37.828 +05:30 [INF] Sending file. Request path: '/Images/man.png'. Physical path: 'E:\Taskify\Task Management\Task Management\wwwroot\images\man.png'
+2023-08-22 13:20:37.829 +05:30 [INF] HTTP GET /Images/man.png responded 200 in 1.9532 ms
+2023-08-22 13:20:37.829 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Images/man.png - - - 200 36059 image/png 2.2767ms
+2023-08-22 13:20:39.393 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Employee/ViewEmployees?linkCode=0 - -
+2023-08-22 13:20:39.398 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.EmployeeController.ViewEmployees (Task Management)'
+2023-08-22 13:20:39.401 +05:30 [INF] Route matched with {action = "ViewEmployees", controller = "Employee"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewEmployees(Int32) on controller Task_Management.Controllers.EmployeeController (Task Management).
+2023-08-22 13:20:39.402 +05:30 [INF] Task_Management.Controllers.EmployeeController.ViewEmployees (Task Management) Execution Started
+2023-08-22 13:20:39.405 +05:30 [INF] Control =>View Employees Action 0
+2023-08-22 13:20:39.412 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__projectId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[employeeId], [e].[emailId], [e].[employeeName], [e].[gender], [e].[managerId], [e].[mobileNumber], [e].[password], [e].[projectId], [e].[role]
+FROM [Employees] AS [e]
+WHERE [e].[projectId] = @__projectId_0
+2023-08-22 13:20:39.418 +05:30 [INF] Fetched 
+[{"employeeId":"Emp101","projectId":5,"employeeName":"Arun","role":"Employee","gender":"Male","emailId":"barunkumar1197@gmail.com","password":"Employee@123","managerId":"M197","mobileNumber":"8778496125","csvFile":null,"employeeDetails":null,"$type":"Employee"}]
+2023-08-22 13:20:39.424 +05:30 [INF] Executing ViewResult, running view ViewEmployees.
+2023-08-22 13:20:39.451 +05:30 [INF] Executed ViewResult - view ViewEmployees executed in 28.4031ms.
+2023-08-22 13:20:39.451 +05:30 [INF] Task_Management.Controllers.EmployeeController.ViewEmployees (Task Management) Executed at 49.4458 sec
+2023-08-22 13:20:39.452 +05:30 [INF] Executed action Task_Management.Controllers.EmployeeController.ViewEmployees (Task Management) in 50.722ms
+2023-08-22 13:20:39.452 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.EmployeeController.ViewEmployees (Task Management)'
+2023-08-22 13:20:39.452 +05:30 [INF] HTTP GET /Employee/ViewEmployees responded 200 in 59.1294 ms
+2023-08-22 13:20:39.452 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Employee/ViewEmployees?linkCode=0 - - - 200 - text/html;+charset=utf-8 59.6097ms
+2023-08-22 13:20:39.501 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/css/viewEmployees - -
+2023-08-22 13:20:39.502 +05:30 [INF] HTTP GET /css/viewEmployees responded 404 in 0.4369 ms
+2023-08-22 13:20:39.503 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/css/viewEmployees - - - 404 0 - 1.5573ms
+2023-08-22 13:20:39.503 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:39.506 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 2.4327ms
+2023-08-22 13:20:41.372 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - -
+2023-08-22 13:20:41.379 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:20:41.379 +05:30 [INF] Route matched with {action = "ViewProjects", controller = "Project"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewProjects() on controller Task_Management.Controllers.ProjectController (Task Management).
+2023-08-22 13:20:41.380 +05:30 [INF] Project Controller  Executed
+2023-08-22 13:20:41.380 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Execution Started
+2023-08-22 13:20:41.380 +05:30 [INF] Control => View Projects Action
+2023-08-22 13:20:41.391 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__managerId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[projectId], [p].[closedProject], [p].[createdDate], [p].[description], [p].[managerId], [p].[title]
+FROM [project] AS [p]
+WHERE [p].[managerId] = @__managerId_0
+2023-08-22 13:20:41.391 +05:30 [INF] Fetched 
+{"currentProjects":[{"projectId":5,"description":null,"title":"Java","managerId":"M197","createdDate":"2023-08-11T00:00:00.0000000","closedProject":false,"$type":"Project"}],"closedProjects":[],"$type":"Projects"}
+2023-08-22 13:20:41.393 +05:30 [INF] Executing ViewResult, running view ViewProjects.
+2023-08-22 13:20:41.399 +05:30 [INF] Executed ViewResult - view ViewProjects executed in 5.2855ms.
+2023-08-22 13:20:41.399 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Executed at 18.6329 sec
+2023-08-22 13:20:41.399 +05:30 [INF] Executed action Task_Management.Controllers.ProjectController.ViewProjects (Task Management) in 20.096ms
+2023-08-22 13:20:41.399 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:20:41.399 +05:30 [INF] HTTP GET /Project/ViewProjects responded 200 in 27.0417 ms
+2023-08-22 13:20:41.400 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - - - 200 - text/html;+charset=utf-8 27.4964ms
+2023-08-22 13:20:41.466 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:41.466 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.2349ms
+2023-08-22 13:20:44.673 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Login/Logout - -
+2023-08-22 13:20:44.677 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Logout (Task Management)'
+2023-08-22 13:20:44.681 +05:30 [INF] Route matched with {action = "Logout", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Logout() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:20:44.683 +05:30 [INF] Task_Management.Controllers.LoginController.Logout (Task Management) Execution Started
+2023-08-22 13:20:44.685 +05:30 [INF] Control => Logout Action
+2023-08-22 13:20:44.687 +05:30 [INF] Executing RedirectResult, redirecting to /.
+2023-08-22 13:20:44.688 +05:30 [INF] Task_Management.Controllers.LoginController.Logout (Task Management) Executed at 4.1116 sec
+2023-08-22 13:20:44.688 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Logout (Task Management) in 5.9085ms
+2023-08-22 13:20:44.688 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Logout (Task Management)'
+2023-08-22 13:20:44.691 +05:30 [INF] HTTP GET /Login/Logout responded 302 in 17.3434 ms
+2023-08-22 13:20:44.692 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Login/Logout - - - 302 0 - 18.8053ms
+2023-08-22 13:20:44.701 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/ - -
+2023-08-22 13:20:44.702 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:20:44.703 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:20:44.705 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Execution Started
+2023-08-22 13:20:44.706 +05:30 [INF] Login Action Executed
+2023-08-22 13:20:44.708 +05:30 [INF] Executing ViewResult, running view Login.
+2023-08-22 13:20:44.717 +05:30 [INF] Executed ViewResult - view Login executed in 9.281ms.
+2023-08-22 13:20:44.717 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Executed at 12.1209 sec
+2023-08-22 13:20:44.717 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Login (Task Management) in 13.1445ms
+2023-08-22 13:20:44.717 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:20:44.717 +05:30 [INF] HTTP GET / responded 200 in 15.9403 ms
+2023-08-22 13:20:44.717 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/ - - - 200 - text/html;+charset=utf-8 16.3118ms
+2023-08-22 13:20:44.771 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:44.772 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.4147ms
+2023-08-22 13:20:47.314 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - -
+2023-08-22 13:20:47.315 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:20:47.315 +05:30 [INF] Route matched with {action = "ViewProjects", controller = "Project"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewProjects() on controller Task_Management.Controllers.ProjectController (Task Management).
+2023-08-22 13:20:47.318 +05:30 [INF] Project Controller  Executed
+2023-08-22 13:20:47.318 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Execution Started
+2023-08-22 13:20:47.318 +05:30 [INF] Control => View Projects Action
+2023-08-22 13:20:47.323 +05:30 [WRN] Unauthorized Access
+2023-08-22 13:20:47.323 +05:30 [INF] Executing RedirectResult, redirecting to /Login/Logout.
+2023-08-22 13:20:47.323 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Executed at 5.4805 sec
+2023-08-22 13:20:47.324 +05:30 [INF] Executed action Task_Management.Controllers.ProjectController.ViewProjects (Task Management) in 9.2849ms
+2023-08-22 13:20:47.324 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:20:47.325 +05:30 [INF] HTTP GET /Project/ViewProjects responded 302 in 10.3344 ms
+2023-08-22 13:20:47.325 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - - - 302 0 - 10.9009ms
+2023-08-22 13:20:47.339 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/ - -
+2023-08-22 13:20:47.339 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:20:47.339 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:20:47.340 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Execution Started
+2023-08-22 13:20:47.344 +05:30 [INF] Login Action Executed
+2023-08-22 13:20:47.345 +05:30 [INF] Executing ViewResult, running view Login.
+2023-08-22 13:20:47.373 +05:30 [INF] Executed ViewResult - view Login executed in 28.6231ms.
+2023-08-22 13:20:47.373 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Executed at 33.3263 sec
+2023-08-22 13:20:47.374 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Login (Task Management) in 34.0787ms
+2023-08-22 13:20:47.374 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:20:47.374 +05:30 [INF] HTTP GET / responded 200 in 34.9039 ms
+2023-08-22 13:20:47.374 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/ - - - 200 - text/html;+charset=utf-8 35.3119ms
+2023-08-22 13:20:47.429 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:47.429 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.2593ms
+2023-08-22 13:20:52.178 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:52.178 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.3612ms
+2023-08-22 13:20:55.981 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Employee/AddEmployee - -
+2023-08-22 13:20:55.982 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.EmployeeController.AddEmployee (Task Management)'
+2023-08-22 13:20:55.982 +05:30 [INF] Route matched with {action = "AddEmployee", controller = "Employee"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddEmployee() on controller Task_Management.Controllers.EmployeeController (Task Management).
+2023-08-22 13:20:55.984 +05:30 [INF] Task_Management.Controllers.EmployeeController.AddEmployee (Task Management) Execution Started
+2023-08-22 13:20:55.984 +05:30 [INF] Control => Add Employee Action
+2023-08-22 13:20:55.984 +05:30 [INF] Executing ViewResult, running view AddEmployee.
+2023-08-22 13:20:55.989 +05:30 [INF] Executed ViewResult - view AddEmployee executed in 5.0817ms.
+2023-08-22 13:20:55.990 +05:30 [INF] Task_Management.Controllers.EmployeeController.AddEmployee (Task Management) Executed at 5.6166 sec
+2023-08-22 13:20:55.990 +05:30 [INF] Executed action Task_Management.Controllers.EmployeeController.AddEmployee (Task Management) in 7.6495ms
+2023-08-22 13:20:55.990 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.EmployeeController.AddEmployee (Task Management)'
+2023-08-22 13:20:55.990 +05:30 [INF] HTTP GET /Employee/AddEmployee responded 200 in 8.6136 ms
+2023-08-22 13:20:55.990 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Employee/AddEmployee - - - 200 - text/html;+charset=utf-8 9.1179ms
+2023-08-22 13:20:56.050 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:56.050 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.2333ms
+2023-08-22 13:20:57.087 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:57.087 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.2540ms
+2023-08-22 13:20:57.940 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Task/CreateTask - -
+2023-08-22 13:20:57.940 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.TaskController.CreateTask (Task Management)'
+2023-08-22 13:20:57.940 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateTask() on controller Task_Management.Controllers.TaskController (Task Management).
+2023-08-22 13:20:57.942 +05:30 [INF] Task_Management.Controllers.TaskController.CreateTask (Task Management) Execution Started
+2023-08-22 13:20:57.942 +05:30 [INF] Create Task Action Executed
+2023-08-22 13:20:57.950 +05:30 [INF] Executed action Task_Management.Controllers.TaskController.CreateTask (Task Management) in 9.2106ms
+2023-08-22 13:20:57.952 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.TaskController.CreateTask (Task Management)'
+2023-08-22 13:20:57.953 +05:30 [ERR] HTTP GET /Task/CreateTask responded 500 in 13.4851 ms
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Task_Management.Models.DatabaseOperations.EmployeeOperations.viewData(Object id) in E:\Taskify\Task Management\Task Management\Models\DatabaseOperations\EmployeeOperations.cs:line 286
+   at Task_Management.Controllers.TaskController.CreateTask() in E:\Taskify\Task Management\Task Management\Controllers\TaskController.cs:line 49
+   at lambda_method295(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-08-22 13:20:58.005 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Task_Management.Models.DatabaseOperations.EmployeeOperations.viewData(Object id) in E:\Taskify\Task Management\Task Management\Models\DatabaseOperations\EmployeeOperations.cs:line 286
+   at Task_Management.Controllers.TaskController.CreateTask() in E:\Taskify\Task Management\Task Management\Controllers\TaskController.cs:line 49
+   at lambda_method295(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-08-22 13:20:58.066 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Task/CreateTask - - - 500 - text/html;+charset=utf-8 126.2084ms
+2023-08-22 13:20:58.109 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:58.110 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.2763ms
+2023-08-22 13:20:59.872 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:20:59.873 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.2860ms
+2023-08-22 13:21:02.177 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Login/Logout - -
+2023-08-22 13:21:02.177 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Logout (Task Management)'
+2023-08-22 13:21:02.178 +05:30 [INF] Route matched with {action = "Logout", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Logout() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:21:02.178 +05:30 [INF] Task_Management.Controllers.LoginController.Logout (Task Management) Execution Started
+2023-08-22 13:21:02.179 +05:30 [INF] Control => Logout Action
+2023-08-22 13:21:02.179 +05:30 [INF] Executing RedirectResult, redirecting to /.
+2023-08-22 13:21:02.179 +05:30 [INF] Task_Management.Controllers.LoginController.Logout (Task Management) Executed at 0.7423 sec
+2023-08-22 13:21:02.180 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Logout (Task Management) in 1.6383ms
+2023-08-22 13:21:02.180 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Logout (Task Management)'
+2023-08-22 13:21:02.180 +05:30 [INF] HTTP GET /Login/Logout responded 302 in 2.7117 ms
+2023-08-22 13:21:02.180 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Login/Logout - - - 302 0 - 3.1136ms
+2023-08-22 13:21:02.188 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/ - -
+2023-08-22 13:21:02.189 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:21:02.190 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:21:02.191 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Execution Started
+2023-08-22 13:21:02.192 +05:30 [INF] Login Action Executed
+2023-08-22 13:21:02.192 +05:30 [INF] Executing ViewResult, running view Login.
+2023-08-22 13:21:02.195 +05:30 [INF] Executed ViewResult - view Login executed in 2.627ms.
+2023-08-22 13:21:02.195 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Executed at 3.9151 sec
+2023-08-22 13:21:02.195 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Login (Task Management) in 5.5543ms
+2023-08-22 13:21:02.195 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:21:02.196 +05:30 [INF] HTTP GET / responded 200 in 8.1359 ms
+2023-08-22 13:21:02.197 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/ - - - 200 - text/html;+charset=utf-8 8.8858ms
+2023-08-22 13:21:02.262 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:21:02.262 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.2797ms
+2023-08-22 13:21:07.261 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/ - -
+2023-08-22 13:21:07.262 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:21:07.262 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:21:07.263 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Execution Started
+2023-08-22 13:21:07.264 +05:30 [INF] Login Action Executed
+2023-08-22 13:21:07.264 +05:30 [INF] Executing ViewResult, running view Login.
+2023-08-22 13:21:07.266 +05:30 [INF] Executed ViewResult - view Login executed in 2.5295ms.
+2023-08-22 13:21:07.267 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Executed at 3.8857 sec
+2023-08-22 13:21:07.267 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Login (Task Management) in 4.3974ms
+2023-08-22 13:21:07.267 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:21:07.267 +05:30 [INF] HTTP GET / responded 200 in 5.3178 ms
+2023-08-22 13:21:07.268 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/ - - - 200 - text/html;+charset=utf-8 6.4779ms
+2023-08-22 13:21:07.362 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:21:07.363 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.3120ms
+2023-08-22 13:21:19.016 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/ - -
+2023-08-22 13:21:19.018 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:21:19.018 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:21:19.020 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Execution Started
+2023-08-22 13:21:19.022 +05:30 [INF] Login Action Executed
+2023-08-22 13:21:19.024 +05:30 [INF] Executing ViewResult, running view Login.
+2023-08-22 13:21:19.027 +05:30 [INF] Executed ViewResult - view Login executed in 4.8839ms.
+2023-08-22 13:21:19.028 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Executed at 7.691 sec
+2023-08-22 13:21:19.028 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Login (Task Management) in 9.4545ms
+2023-08-22 13:21:19.028 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:21:19.028 +05:30 [INF] HTTP GET / responded 200 in 11.3551 ms
+2023-08-22 13:21:19.028 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/ - - - 200 - text/html;+charset=utf-8 11.7901ms
+2023-08-22 13:21:19.573 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:21:19.573 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.3598ms
+2023-08-22 13:21:23.630 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5182/Login application/x-www-form-urlencoded 39
+2023-08-22 13:21:23.630 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:21:23.631 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Task_Management.Models.Templete.UserLogin) on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:21:23.635 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Execution Started
+2023-08-22 13:21:23.636 +05:30 [INF] Control => Login Post
+2023-08-22 13:21:23.653 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__ToLower_0='?' (Size = 450), @__ToLower_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[managerId], [m].[emailId], [m].[gender], [m].[mobileNumber], [m].[name], [m].[password], [m].[role]
+FROM [manager] AS [m]
+WHERE LOWER([m].[managerId]) = @__ToLower_0 AND LOWER([m].[password]) = @__ToLower_1
+2023-08-22 13:21:23.656 +05:30 [INF] Executing RedirectResult, redirecting to /Login/AuthenticateRole.
+2023-08-22 13:21:23.656 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Executed at 20.8109 sec
+2023-08-22 13:21:23.656 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Login (Task Management) in 25.6806ms
+2023-08-22 13:21:23.656 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:21:23.657 +05:30 [INF] HTTP POST /Login responded 302 in 26.6546 ms
+2023-08-22 13:21:23.657 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5182/Login application/x-www-form-urlencoded 39 - 302 0 - 27.1248ms
+2023-08-22 13:21:23.663 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Login/AuthenticateRole - -
+2023-08-22 13:21:23.665 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.AuthenticateRole (Task Management)'
+2023-08-22 13:21:23.665 +05:30 [INF] Route matched with {action = "AuthenticateRole", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AuthenticateRole() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:21:23.666 +05:30 [INF] Task_Management.Controllers.LoginController.AuthenticateRole (Task Management) Execution Started
+2023-08-22 13:21:23.666 +05:30 [INF] Control => Authentication Role Action
+2023-08-22 13:21:23.667 +05:30 [INF] Executing RedirectResult, redirecting to /Project/ViewProjects.
+2023-08-22 13:21:23.667 +05:30 [INF] Task_Management.Controllers.LoginController.AuthenticateRole (Task Management) Executed at 0.9708 sec
+2023-08-22 13:21:23.667 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.AuthenticateRole (Task Management) in 1.7924ms
+2023-08-22 13:21:23.667 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.AuthenticateRole (Task Management)'
+2023-08-22 13:21:23.667 +05:30 [INF] HTTP GET /Login/AuthenticateRole responded 302 in 3.7099 ms
+2023-08-22 13:21:23.668 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Login/AuthenticateRole - - - 302 0 - 4.2271ms
+2023-08-22 13:21:23.677 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - -
+2023-08-22 13:21:23.677 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:21:23.677 +05:30 [INF] Route matched with {action = "ViewProjects", controller = "Project"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewProjects() on controller Task_Management.Controllers.ProjectController (Task Management).
+2023-08-22 13:21:23.678 +05:30 [INF] Project Controller  Executed
+2023-08-22 13:21:23.678 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Execution Started
+2023-08-22 13:21:23.679 +05:30 [INF] Control => View Projects Action
+2023-08-22 13:21:23.685 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__managerId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[projectId], [p].[closedProject], [p].[createdDate], [p].[description], [p].[managerId], [p].[title]
+FROM [project] AS [p]
+WHERE [p].[managerId] = @__managerId_0
+2023-08-22 13:21:23.685 +05:30 [INF] Fetched 
+{"currentProjects":[{"projectId":5,"description":null,"title":"Java","managerId":"M197","createdDate":"2023-08-11T00:00:00.0000000","closedProject":false,"$type":"Project"}],"closedProjects":[],"$type":"Projects"}
+2023-08-22 13:21:23.686 +05:30 [INF] Executing ViewResult, running view ViewProjects.
+2023-08-22 13:21:23.690 +05:30 [INF] Executed ViewResult - view ViewProjects executed in 3.738ms.
+2023-08-22 13:21:23.690 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Executed at 11.304 sec
+2023-08-22 13:21:23.690 +05:30 [INF] Executed action Task_Management.Controllers.ProjectController.ViewProjects (Task Management) in 12.4058ms
+2023-08-22 13:21:23.690 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:21:23.691 +05:30 [INF] HTTP GET /Project/ViewProjects responded 200 in 13.5368 ms
+2023-08-22 13:21:23.691 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - - - 200 - text/html;+charset=utf-8 14.5321ms
+2023-08-22 13:21:23.783 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:21:23.784 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.1912ms
+2023-08-22 13:21:30.775 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - -
+2023-08-22 13:21:30.776 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:21:30.776 +05:30 [INF] Route matched with {action = "ViewProjects", controller = "Project"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewProjects() on controller Task_Management.Controllers.ProjectController (Task Management).
+2023-08-22 13:21:30.777 +05:30 [INF] Project Controller  Executed
+2023-08-22 13:21:30.777 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Execution Started
+2023-08-22 13:21:30.778 +05:30 [INF] Control => View Projects Action
+2023-08-22 13:21:30.785 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__managerId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[projectId], [p].[closedProject], [p].[createdDate], [p].[description], [p].[managerId], [p].[title]
+FROM [project] AS [p]
+WHERE [p].[managerId] = @__managerId_0
+2023-08-22 13:21:30.785 +05:30 [INF] Fetched 
+{"currentProjects":[{"projectId":5,"description":null,"title":"Java","managerId":"M197","createdDate":"2023-08-11T00:00:00.0000000","closedProject":false,"$type":"Project"}],"closedProjects":[],"$type":"Projects"}
+2023-08-22 13:21:30.786 +05:30 [INF] Executing ViewResult, running view ViewProjects.
+2023-08-22 13:21:30.787 +05:30 [INF] Executed ViewResult - view ViewProjects executed in 1.3458ms.
+2023-08-22 13:21:30.788 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Executed at 10.1714 sec
+2023-08-22 13:21:30.788 +05:30 [INF] Executed action Task_Management.Controllers.ProjectController.ViewProjects (Task Management) in 11.8428ms
+2023-08-22 13:21:30.788 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:21:30.788 +05:30 [INF] HTTP GET /Project/ViewProjects responded 200 in 12.7175 ms
+2023-08-22 13:21:30.788 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - - - 200 - text/html;+charset=utf-8 13.1651ms
+2023-08-22 13:21:30.836 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:21:30.836 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.1521ms
+2023-08-22 13:21:34.883 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Project/AddProject - -
+2023-08-22 13:21:34.884 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.ProjectController.AddProject (Task Management)'
+2023-08-22 13:21:34.887 +05:30 [INF] Route matched with {action = "AddProject", controller = "Project"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddProject() on controller Task_Management.Controllers.ProjectController (Task Management).
+2023-08-22 13:21:34.888 +05:30 [INF] Project Controller  Executed
+2023-08-22 13:21:34.888 +05:30 [INF] Task_Management.Controllers.ProjectController.AddProject (Task Management) Execution Started
+2023-08-22 13:21:34.891 +05:30 [INF] Control => Add Project Action
+2023-08-22 13:21:34.903 +05:30 [INF] Success : {@Record}
+2023-08-22 13:21:34.908 +05:30 [INF] Executing ViewResult, running view AddProject.
+2023-08-22 13:21:34.953 +05:30 [INF] Executed ViewResult - view AddProject executed in 47.9741ms.
+2023-08-22 13:21:34.953 +05:30 [INF] Task_Management.Controllers.ProjectController.AddProject (Task Management) Executed at 65.0433 sec
+2023-08-22 13:21:34.953 +05:30 [INF] Executed action Task_Management.Controllers.ProjectController.AddProject (Task Management) in 65.8849ms
+2023-08-22 13:21:34.953 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.ProjectController.AddProject (Task Management)'
+2023-08-22 13:21:34.953 +05:30 [INF] HTTP GET /Project/AddProject responded 200 in 69.8265 ms
+2023-08-22 13:21:34.954 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Project/AddProject - - - 200 - text/html;+charset=utf-8 70.2168ms
+2023-08-22 13:21:34.986 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/css/addProject.css - -
+2023-08-22 13:21:35.038 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:21:35.038 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.2166ms
+2023-08-22 13:21:35.148 +05:30 [INF] Sending file. Request path: '/css/addProject.css'. Physical path: 'E:\Taskify\Task Management\Task Management\wwwroot\css\addProject.css'
+2023-08-22 13:21:35.148 +05:30 [INF] HTTP GET /css/addProject.css responded 200 in 162.2662 ms
+2023-08-22 13:21:35.149 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/css/addProject.css - - - 200 1421 text/css 163.3026ms
+2023-08-22 13:21:41.575 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - -
+2023-08-22 13:21:41.576 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:21:41.577 +05:30 [INF] Route matched with {action = "ViewProjects", controller = "Project"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewProjects() on controller Task_Management.Controllers.ProjectController (Task Management).
+2023-08-22 13:21:41.579 +05:30 [INF] Project Controller  Executed
+2023-08-22 13:21:41.579 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Execution Started
+2023-08-22 13:21:41.579 +05:30 [INF] Control => View Projects Action
+2023-08-22 13:21:41.586 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__managerId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[projectId], [p].[closedProject], [p].[createdDate], [p].[description], [p].[managerId], [p].[title]
+FROM [project] AS [p]
+WHERE [p].[managerId] = @__managerId_0
+2023-08-22 13:21:41.586 +05:30 [INF] Fetched 
+{"currentProjects":[{"projectId":5,"description":null,"title":"Java","managerId":"M197","createdDate":"2023-08-11T00:00:00.0000000","closedProject":false,"$type":"Project"}],"closedProjects":[],"$type":"Projects"}
+2023-08-22 13:21:41.586 +05:30 [INF] Executing ViewResult, running view ViewProjects.
+2023-08-22 13:21:41.588 +05:30 [INF] Executed ViewResult - view ViewProjects executed in 1.3668ms.
+2023-08-22 13:21:41.588 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Executed at 8.9844 sec
+2023-08-22 13:21:41.588 +05:30 [INF] Executed action Task_Management.Controllers.ProjectController.ViewProjects (Task Management) in 11.0418ms
+2023-08-22 13:21:41.588 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:21:41.588 +05:30 [INF] HTTP GET /Project/ViewProjects responded 200 in 12.7410 ms
+2023-08-22 13:21:41.588 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - - - 200 - text/html;+charset=utf-8 13.2270ms
+2023-08-22 13:21:41.640 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:21:41.640 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.1797ms
+2023-08-22 13:22:33.709 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Login/Logout - -
+2023-08-22 13:22:33.710 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Logout (Task Management)'
+2023-08-22 13:22:33.710 +05:30 [INF] Route matched with {action = "Logout", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Logout() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:22:33.711 +05:30 [INF] Task_Management.Controllers.LoginController.Logout (Task Management) Execution Started
+2023-08-22 13:22:33.711 +05:30 [INF] Control => Logout Action
+2023-08-22 13:22:33.712 +05:30 [INF] Executing RedirectResult, redirecting to /.
+2023-08-22 13:22:33.712 +05:30 [INF] Task_Management.Controllers.LoginController.Logout (Task Management) Executed at 0.6401 sec
+2023-08-22 13:22:33.712 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Logout (Task Management) in 1.825ms
+2023-08-22 13:22:33.712 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Logout (Task Management)'
+2023-08-22 13:22:33.714 +05:30 [INF] HTTP GET /Login/Logout responded 302 in 5.0927 ms
+2023-08-22 13:22:33.715 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Login/Logout - - - 302 0 - 5.8248ms
+2023-08-22 13:22:33.720 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/ - -
+2023-08-22 13:22:33.720 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:22:33.720 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:22:33.721 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Execution Started
+2023-08-22 13:22:33.721 +05:30 [INF] Login Action Executed
+2023-08-22 13:22:33.721 +05:30 [INF] Executing ViewResult, running view Login.
+2023-08-22 13:22:33.723 +05:30 [INF] Executed ViewResult - view Login executed in 1.5181ms.
+2023-08-22 13:22:33.723 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Executed at 1.9433 sec
+2023-08-22 13:22:33.723 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Login (Task Management) in 2.6664ms
+2023-08-22 13:22:33.723 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:22:33.723 +05:30 [INF] HTTP GET / responded 200 in 3.2994 ms
+2023-08-22 13:22:33.724 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/ - - - 200 - text/html;+charset=utf-8 4.0973ms
+2023-08-22 13:22:33.765 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:22:33.765 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.3331ms
+2023-08-22 13:22:38.510 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5182/Login application/x-www-form-urlencoded 39
+2023-08-22 13:22:38.511 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:22:38.511 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Task_Management.Models.Templete.UserLogin) on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:22:38.513 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Execution Started
+2023-08-22 13:22:38.513 +05:30 [INF] Control => Login Post
+2023-08-22 13:22:38.539 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__ToLower_0='?' (Size = 450), @__ToLower_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[managerId], [m].[emailId], [m].[gender], [m].[mobileNumber], [m].[name], [m].[password], [m].[role]
+FROM [manager] AS [m]
+WHERE LOWER([m].[managerId]) = @__ToLower_0 AND LOWER([m].[password]) = @__ToLower_1
+2023-08-22 13:22:38.540 +05:30 [INF] Executing RedirectResult, redirecting to /Login/AuthenticateRole.
+2023-08-22 13:22:38.540 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Executed at 27.0061 sec
+2023-08-22 13:22:38.540 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Login (Task Management) in 28.4903ms
+2023-08-22 13:22:38.540 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:22:38.540 +05:30 [INF] HTTP POST /Login responded 302 in 29.8667 ms
+2023-08-22 13:22:38.541 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5182/Login application/x-www-form-urlencoded 39 - 302 0 - 30.3235ms
+2023-08-22 13:22:38.548 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Login/AuthenticateRole - -
+2023-08-22 13:22:38.549 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.AuthenticateRole (Task Management)'
+2023-08-22 13:22:38.549 +05:30 [INF] Route matched with {action = "AuthenticateRole", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AuthenticateRole() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:22:38.550 +05:30 [INF] Task_Management.Controllers.LoginController.AuthenticateRole (Task Management) Execution Started
+2023-08-22 13:22:38.550 +05:30 [INF] Control => Authentication Role Action
+2023-08-22 13:22:38.553 +05:30 [INF] Executing RedirectResult, redirecting to /Project/ViewProjects.
+2023-08-22 13:22:38.553 +05:30 [INF] Task_Management.Controllers.LoginController.AuthenticateRole (Task Management) Executed at 3.1722 sec
+2023-08-22 13:22:38.554 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.AuthenticateRole (Task Management) in 4.4447ms
+2023-08-22 13:22:38.554 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.AuthenticateRole (Task Management)'
+2023-08-22 13:22:38.554 +05:30 [INF] HTTP GET /Login/AuthenticateRole responded 302 in 5.6583 ms
+2023-08-22 13:22:38.555 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Login/AuthenticateRole - - - 302 0 - 6.3160ms
+2023-08-22 13:22:38.560 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - -
+2023-08-22 13:22:38.561 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:22:38.561 +05:30 [INF] Route matched with {action = "ViewProjects", controller = "Project"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ViewProjects() on controller Task_Management.Controllers.ProjectController (Task Management).
+2023-08-22 13:22:38.562 +05:30 [INF] Project Controller  Executed
+2023-08-22 13:22:38.562 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Execution Started
+2023-08-22 13:22:38.562 +05:30 [INF] Control => View Projects Action
+2023-08-22 13:22:38.569 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__managerId_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[projectId], [p].[closedProject], [p].[createdDate], [p].[description], [p].[managerId], [p].[title]
+FROM [project] AS [p]
+WHERE [p].[managerId] = @__managerId_0
+2023-08-22 13:22:38.570 +05:30 [INF] Fetched 
+{"currentProjects":[{"projectId":5,"description":null,"title":"Java","managerId":"M197","createdDate":"2023-08-11T00:00:00.0000000","closedProject":false,"$type":"Project"}],"closedProjects":[],"$type":"Projects"}
+2023-08-22 13:22:38.570 +05:30 [INF] Executing ViewResult, running view ViewProjects.
+2023-08-22 13:22:38.572 +05:30 [INF] Executed ViewResult - view ViewProjects executed in 1.3287ms.
+2023-08-22 13:22:38.572 +05:30 [INF] Task_Management.Controllers.ProjectController.ViewProjects (Task Management) Executed at 9.7651 sec
+2023-08-22 13:22:38.572 +05:30 [INF] Executed action Task_Management.Controllers.ProjectController.ViewProjects (Task Management) in 10.6362ms
+2023-08-22 13:22:38.572 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.ProjectController.ViewProjects (Task Management)'
+2023-08-22 13:22:38.572 +05:30 [INF] HTTP GET /Project/ViewProjects responded 200 in 11.4288 ms
+2023-08-22 13:22:38.572 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Project/ViewProjects - - - 200 - text/html;+charset=utf-8 11.8092ms
+2023-08-22 13:22:38.626 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:22:38.627 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.7511ms
+2023-08-22 13:22:51.180 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/Login/Logout - -
+2023-08-22 13:22:51.181 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Logout (Task Management)'
+2023-08-22 13:22:51.182 +05:30 [INF] Route matched with {action = "Logout", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Logout() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:22:51.183 +05:30 [INF] Task_Management.Controllers.LoginController.Logout (Task Management) Execution Started
+2023-08-22 13:22:51.184 +05:30 [INF] Control => Logout Action
+2023-08-22 13:22:51.184 +05:30 [INF] Executing RedirectResult, redirecting to /.
+2023-08-22 13:22:51.184 +05:30 [INF] Task_Management.Controllers.LoginController.Logout (Task Management) Executed at 0.7167 sec
+2023-08-22 13:22:51.185 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Logout (Task Management) in 3.3674ms
+2023-08-22 13:22:51.186 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Logout (Task Management)'
+2023-08-22 13:22:51.186 +05:30 [INF] HTTP GET /Login/Logout responded 302 in 6.2569 ms
+2023-08-22 13:22:51.186 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/Login/Logout - - - 302 0 - 6.6428ms
+2023-08-22 13:22:51.191 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/ - -
+2023-08-22 13:22:51.191 +05:30 [INF] Executing endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:22:51.192 +05:30 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Task_Management.Controllers.LoginController (Task Management).
+2023-08-22 13:22:51.192 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Execution Started
+2023-08-22 13:22:51.192 +05:30 [INF] Login Action Executed
+2023-08-22 13:22:51.193 +05:30 [INF] Executing ViewResult, running view Login.
+2023-08-22 13:22:51.194 +05:30 [INF] Executed ViewResult - view Login executed in 1.249ms.
+2023-08-22 13:22:51.194 +05:30 [INF] Task_Management.Controllers.LoginController.Login (Task Management) Executed at 1.8807 sec
+2023-08-22 13:22:51.194 +05:30 [INF] Executed action Task_Management.Controllers.LoginController.Login (Task Management) in 2.4607ms
+2023-08-22 13:22:51.194 +05:30 [INF] Executed endpoint 'Task_Management.Controllers.LoginController.Login (Task Management)'
+2023-08-22 13:22:51.194 +05:30 [INF] HTTP GET / responded 200 in 2.9179 ms
+2023-08-22 13:22:51.194 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/ - - - 200 - text/html;+charset=utf-8 3.2147ms
+2023-08-22 13:22:51.234 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - -
+2023-08-22 13:22:51.234 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5182/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 0.3032ms
+2023-08-22 13:24:03.203 +05:30 [INF] Application is shutting down...

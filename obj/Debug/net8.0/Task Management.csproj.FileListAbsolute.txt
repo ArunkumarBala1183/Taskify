@@ -1,0 +1,9 @@
+D:\Dotnet\Taskify\obj\Debug\net8.0\Task Management.csproj.AssemblyReference.cache
+D:\Dotnet\Taskify\obj\Debug\net8.0\Task Management.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dotnet\Taskify\obj\Debug\net8.0\Task Management.AssemblyInfoInputs.cache
+D:\Dotnet\Taskify\obj\Debug\net8.0\Task Management.AssemblyInfo.cs
+D:\Dotnet\Taskify\obj\Debug\net8.0\Task Management.csproj.CoreCompileInputs.cache
+D:\Dotnet\Taskify\obj\Debug\net8.0\Task Management.MvcApplicationPartsAssemblyInfo.cache
+D:\Dotnet\Taskify\obj\Debug\net8.0\Task Management.RazorAssemblyInfo.cache
+D:\Dotnet\Taskify\obj\Debug\net8.0\Task Management.RazorAssemblyInfo.cs
+D:\Dotnet\Taskify\obj\Debug\net8.0\Task Management.sourcelink.json

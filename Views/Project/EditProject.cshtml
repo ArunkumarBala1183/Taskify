@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Edit Project";
+    ViewData["css"] = "addProject.css";
+}
+@model Task_Management.Models.Templete.Project
+
+
+<div class="card">
+    <form method="post" asp-action="EditProject">
+        <div class="header">
+            <p class="alert">Edit Project</p>
+        </div>
+
+        <input type="text" readonly asp-for="projectId" hidden value="@Model.projectId" />
+        <input type="text" asp-for="title" value="@Model.title" class="form-control" placeholder="Title">
+        <span class="field-validation-error" asp-validation-for="title"></span>
+        <textarea asp-for="description" class="form-control" placeholder="Description">@Model.description</textarea>
+        <span class="field-validation-error" asp-validation-for="description"></span>
+
+        <div class="actions">
+            <input class="btn btn-primary" type="submit" value="Edit" />
+
+            <a class="mark-as-read" href="@Url.Action("ViewProjects","Project")">
+                View Projects
+            </a>
+        </div>
+    </form>
+</div>
+
+@if (TempData["message"] != null)
+{
+    <span class="message">@TempData["message"]</span>
+}

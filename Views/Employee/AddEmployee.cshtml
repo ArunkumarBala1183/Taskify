@@ -1,0 +1,108 @@
+﻿@{
+    Layout = "_ResponsiveOperations";
+    ViewData["Title"] = "Add Employee";
+    ViewData["css"] = "addEmployee.css";
+
+    string colorCode = "";
+    string icon = "";
+
+    if (ViewBag.showToast != null)
+    {
+        if(ViewBag.Head == "Success")
+        {
+            colorCode = "#00D100";
+            icon = "fa-solid fa-check";
+        }
+        else
+        {
+            colorCode = "#FF0000";
+            icon = "fa-solid fa-circle-exclamation";
+        }
+    }
+}
+
+@using System.Data
+@model Task_Management.Models.Templete.UserForm
+
+<head>
+
+    <link rel="stylesheet" href="/css/toast.css" />
+</head>
+
+@if (ViewBag.details == null)
+{
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                <img class="rounded-circle mt-5"
+                     src="../Images/man.png" height="150px" width="150px">
+            </div>
+        </div>
+
+        <div style="max-width:720px; padding:2rem" class="card">
+            <form method="post" class="row g-3" asp-action="GetEmployeeRecord">
+                @*<div class="col-12">
+                    <label for="employeeName" class="form-label">Name</label>
+                    <input asp-for="employeeName" type="text" class="form-control">
+                    <span class="error_message" asp-validation-for="employeeName"></span>
+                </div>*@
+                <div class="col-12">
+                    <label asp-for="employeeId" class="form-label">Employee Id</label>
+                    <input type="text" asp-for="employeeId" class="form-control">
+                    @if (ViewBag.Empty != null)
+                    {
+                        <span class="error_message">@ViewBag.Empty</span>
+                    }
+                </div>
+                @*<div class="col-12">
+                    <label class="form-label">Gender</label>
+                    <input type="radio" asp-for="gender" class="gender" name="gender" value="Male" /> Male
+                    <input type="radio" asp-for="gender" class="gender" name="gender" value="Female" />Female
+                    <br>
+                    <span class="error_message" asp-validation-for="gender"></span>
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress2" class="form-label">Email Address</label>
+                    <input type="email" asp-for="emailId" class="form-control" placeholder="example@gmail.com">
+                    <span class="error_message" asp-validation-for="emailId"></span>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Mobile Number</label>
+                    <input type="number" asp-for="mobileNumber" class="form-control">
+                    <span class="error_message" asp-validation-for="mobileNumber"></span>
+                </div>
+*@
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Add User</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card" id="card">
+
+            <form method="post" action="UploadCsv" enctype="multipart/form-data">
+                <div class="containers">
+                    <label for="arquivo">Employees CSV File:</label>
+                    <input accept=".csv" class="inpdddut" name="csvFile" type="file">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+}
+else
+{
+    <h1>The Following Employees are already assigned in the Projects</h1>
+    <ol>
+        @{
+            List<string> details = ViewBag.details as List<string>;
+            foreach (string employeeId in details)
+            {
+                <li>@employeeId</li>
+            }
+        }
+    </ol>
+
+    <a href="@Url.Action("AddEmployee" , "Employee")" class="btn btn-success">Ok</a>
+}

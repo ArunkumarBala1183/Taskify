@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "_ResponsiveOperations";
+    ViewData["Title"] = "Edit Employee";
+    ViewData["css"] = "editEmployee.css";
+}
+
+@model Task_Management.Models.Templete.Employee
+
+<form class="form" asp-action="EditEmployee">
+    <p class="form-title">Edit Employee Details</p>
+    <div class="input-container">
+        <input placeholder="Employee Id" asp-for="employeeId" readonly value="@Model.employeeId" type="text">
+    </div>
+    <div class="input-container">
+        <input placeholder="Employee Name" asp-for="employeeName" value="@Model.employeeName" type="text">
+    </div>
+    
+    @*<input @(Model.gender == "Male" ? "checked" : "")
+           asp-for="gender" class="gender" name="gender" value="Male" type="radio">Male
+    <input style="margin-left:10px" @(Model.gender == "Female" ? "checked" : "")
+           asp-for="gender" class="gender" name="gender" value="Female" type="radio">Female*@
+    <div class="input-container">
+        <input placeholder="Email Id" asp-for="emailId" value="@Model.emailId" type="email">
+    </div>
+    <div class="input-container">
+        <input placeholder="Mobile Number" asp-for="mobileNumber" value="@Model.mobileNumber" type="text">
+    </div>
+    <div class="btn-container">
+        <button class="btn btn-success" type="submit" style="margin-right: 2rem;">
+            Update Employee
+        </button>
+        <a href="@Url.Action("ViewEmployees" , "Employee")">
+            <button class="btn btn-primary" type="button">
+                Cancel
+            </button>
+        </a>
+    </div>
+</form>
+
+@if (ViewData["message"] != null)
+{
+    <span>@ViewData["message"]</span>
+}
+

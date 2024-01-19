@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "_ResponsiveOperations";
+    ViewData["Title"] = "View Employees";
+    ViewData["css"] = "viewEmployees";
+}
+@using Task_Management.Models.Templete
+
+@model IEnumerable<Employee>
+
+@if(ViewBag.status != null)
+{
+    <h1>@ViewBag.status</h1>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Sno</th>
+                <th scope="col">Employee Id</th>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Email Id</th>
+                <th scope="col">Mobile Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int index = 0;
+            }
+            @foreach (Employee employee in Model)
+            {
+                <tr>
+                    @{
+                        index++;
+                    }
+                    <th scope="row">@index</th>
+                    <td>@employee.employeeId</td>
+                    <td>@employee.employeeName</td>
+                    <td>@employee.gender</td>
+                    <td>@employee.emailId</td>
+                    <td>@employee.mobileNumber</td>
+
+                    @if(ViewBag.linkCode == 0)
+                    {
+                        <td><a href="@Url.Action("EditEmployee" , "Employee" , new {employeeId = employee.employeeId})" class="btn btn-success">Edit</a></td>
+                        <td><a href="@Url.Action("DeleteEmployee" , "Employee" , new {employeeId = employee.employeeId})" class="btn btn-danger">Delete</a></td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}

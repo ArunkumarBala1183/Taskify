@@ -1,0 +1,63 @@
+﻿
+.containers {
+    margin-top: 20px;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff69;
+    border-radius: 5px;
+}
+
+.error_message
+{
+    color:red;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.inpdddut[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.inpdddut[type="submit"] {
+    padding: 10px 20px;
+    background-color: #682773;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .inpdddut[type="submit"]:hover {
+        background-color: #682773;
+    }
+
+input[type="radio"]
+{
+    margin-left:revert;
+    margin-right:revert;
+}
+
+.card{
+    margin-top:2rem;
+}
+
+#card {
+    margin-top: 5rem;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: fit-content;
+    max-height: inherit;
+}

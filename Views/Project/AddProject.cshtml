@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Add Project";
+    ViewData["css"] = "addProject.css";
+
+    string colorCode = "";
+    string icon = "";
+
+    if (ViewBag.showToast != null)
+    {
+        colorCode = "#00D100";
+        icon = "fa-solid fa-check";
+    }
+}
+
+@model Task_Management.Models.Templete.Project
+
+<div style="border-left: 6px solid @colorCode;" id="toast">
+    <div class="toast-content">
+        <i style="background-color:@colorCode" class="@icon check"></i>
+        <div class="messages">
+            <span class="text text-1">@ViewBag.Head</span>
+            <span class="text text-2">@ViewBag.Message</span>
+        </div>
+    </div>
+    <i class="fa-solid fa-xmark close"></i>
+</div>
+
+<div class="card">
+    <form method="post" asp-action="AddProject">
+    <div class="header">
+        <p class="alert">Create Project</p>
+    </div>
+
+    <input type="text" asp-for="title" class="form-control" placeholder="Title">
+    <span class="field-validation-error" asp-validation-for="title"></span>
+    <textarea asp-for="description" class="form-control" placeholder="Description"></textarea>
+    <span class="field-validation-error" asp-validation-for="description"></span>
+
+    <div class="actions">
+        <input class="btn btn-primary" type="submit" value="Create"/>
+
+        <a class="mark-as-read" href="@Url.Action("ViewProjects","Project")">
+            View Projects
+        </a>
+    </div>
+    </form>
+</div>
+
+@if(TempData["message"] != null)
+{
+    <span class="message">@TempData["message"]</span>
+}

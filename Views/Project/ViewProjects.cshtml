@@ -1,0 +1,132 @@
+﻿@{
+    ViewData["Title"] = "Projects";
+    ViewData["css"] = "viewProjects.css";
+}
+
+
+@using Task_Management.Models.Templete
+@model Projects
+
+<div style="margin-top: 2rem;
+    padding-bottom: 4rem;">
+    <form class="row row-cols-lg-auto g-3 align-items-center" method="post" action="/Project/SearchProject">
+        <div class="col-12">
+            <div class="input-group">
+                <input type="text" class="form-control" name="search" id="inlineFormInputGroupUsername" placeholder="Search">
+            </div>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-success">Search</button>
+        </div>
+    </form>
+</div>
+
+@if (TempData["message"] != null)
+{
+    <span>@TempData["message"]</span>
+}
+
+
+@if(Model != null)
+{
+    <h1 style="    font-size: revert;
+    padding-inline: 2rem;">
+        Projects
+    </h1>
+    <hr style="    margin-inline: 2rem;
+    border-style: solid;
+    border-width: 3px;
+}" />
+    
+    @if(Model.currentProjects.Count > 0)
+    {
+        <div class="row">
+            @foreach (Project project in Model.currentProjects)
+            {
+
+                <div class="card">
+                    <div class="info">
+
+                        <p class="title">@project.title</p>
+                        <div class="menu">
+                            <img class="drp-img" src="~/images/menu.png">
+                            <div class="dropdown-content">
+                                <a href="@Url.Action("EditProject","Project" , new { projectId = project.projectId})">Edit</a>
+                                <a href="@Url.Action("CloseProject","Project" , new {projectId = project.projectId})">Close Project</a>
+                            </div>
+                        </div>
+
+                        <p class="des">@project.description</p>
+                    </div>
+
+                    <span class="date-view">@project.createdDate.ToString("dd-MM-yyyy")</span>
+                    <div class="but">
+                        <a class="link" href="@Url.Action("ViewTasks","Task" , new { projectId = project.projectId , isClosed = project.closedProject})">
+                            <button type="button" class="action">
+                                View Details
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                @*previousDate = project.createdDate.Date;*@
+            }
+        </div>
+    }
+    else
+    {
+        <span id="message">You can see the Current Projects here </span>
+    }
+
+    <h1 style="font-size: revert;
+    padding-inline: 2rem;
+    margin-top: 5rem;">
+        Closed Projects
+    </h1>
+
+    <hr style="    margin-inline: 2rem;
+    border-style: solid;
+    border-width: 3px;
+}" />
+
+    @if(Model.closedProjects.Count > 0)
+    {
+        <div class="row">
+            @foreach (Project project in Model.closedProjects)
+            {
+
+                <div class="card">
+                    <div class="info">
+
+                        <p class="title">@project.title</p>
+                        <div class="menu">
+                            <img class="drp-img" src="~/images/menu.png">
+                            <div class="dropdown-content">
+                                <a href="@Url.Action("EditProject","Project" , new { projectId = project.projectId})">Edit</a>
+                                <a href="@Url.Action("ReteriveProject" ,"project" , new {projectId = project.projectId})">Reterive Project</a>
+                            </div>
+                        </div>
+
+                        <p class="des">@project.description</p>
+                    </div>
+
+                    <span class="date-view">@project.createdDate.ToString("dd-MM-yyyy")</span>
+                    <div class="but">
+                        <a class="link" href="@Url.Action("ViewTasks","Task" , new { projectId = project.projectId , isClosed = project.closedProject})">
+                            <button type="button" class="action">
+                                View Details
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                @*previousDate = project.createdDate.Date;*@
+            }
+        </div>
+    }
+    else
+    {
+        <span id="message">You can see the Closed Projects here</span>
+    }
+}
